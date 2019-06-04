@@ -8,9 +8,11 @@ console.log(event)
 
       if (gender === 'male' && height === 'tall' && hair === 'brunette'){
         celeb = "Ryan Reynolds";
-      } else if (gender === 'male' && height === 'tall' && hair === 'blonde')
+      } else if (gender === 'male' && height === 'tall' && hair === 'blonde'){
         celeb = "Ryan Gosling";
-
+      } else if (gender === 'female' && height === 'tall' && hair === 'blonde'){
+        celeb = "Blake Lively";
+      }
       $("#celeb").empty().append(celeb);
       $("#result").show();
     event.preventDefault();
