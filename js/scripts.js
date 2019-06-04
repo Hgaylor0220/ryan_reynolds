@@ -1,22 +1,18 @@
 $(document).ready(function() {
-  // $()
   $("form#quiz").submit(function(event) {
-    event.preventDefault();
-
+console.log(event)
+      var celeb;
       var gender = $("select#gender").val();
       var height = $("select#height").val();
       var hair = $("select#hair").val();
-      console.log(gender)
-      if (gender && height && hair) {
-        gender + hair + height === 'Ryan Renyolds'
 
+      if (gender === 'male' && height === 'tall' && hair === 'brunette'){
+        celeb = "Ryan Reynolds";
+      } else if (gender === 'male' && height === 'tall' && hair === 'blonde')
+        celeb = "Ryan Gosling";
 
-      $("#celeb").empty().append('You' + gender + ', you are ' + height);
+      $("#celeb").empty().append(celeb);
       $("#result").show();
-    } else {
-      alert('Please enter your preferences!');
-    }
-
-
+    event.preventDefault();
   });
 });
